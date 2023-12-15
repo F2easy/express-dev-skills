@@ -13,6 +13,8 @@ router.get('/', teamsCtrl.index)
 // GET/teams/new --> Always before/above show 
 router.get('/new', teamsCtrl.new);
 
+//GET/teams/:id/edit
+
 // GET/teams/ id
 router.get('/:id', teamsCtrl.show);
 
