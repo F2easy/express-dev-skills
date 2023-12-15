@@ -15,7 +15,9 @@ module.exports = {
 };
 
 function create(team){
-
+  team.id = Date.now() % 1000000;
+  team.qualify = false;
+  teams.push(team)
 }
 
 function deleteOne(id){

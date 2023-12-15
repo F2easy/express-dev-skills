@@ -15,6 +15,7 @@ function deleteTeam(req, res) {
 }
 
 
+
 function create(req, res) {
   console.log(req.body);
   // The model is responsible for creating data
