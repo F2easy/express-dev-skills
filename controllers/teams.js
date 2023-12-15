@@ -5,8 +5,15 @@ module.exports = {
   show,
   new: newTeam,
   create,
-  delete: deleteOne
+  delete: deleteTeam
 };
+
+
+function deleteTeam(req, res) {
+  Team.deleteOne(req.params.id);
+  res.redirect('/');
+}
+
 
 function create(req, res) {
   console.log(req.body);
@@ -14,12 +21,6 @@ function create(req, res) {
    Team.create(req.body);
   // Do a redirect anytime data is changed
   res.redirect('/');
-}
-
-function deleteOne(id){
-  id = parseInt(id);
-  // find th eindex for the team
-  const idx = teams.findIndex()
 }
 
 

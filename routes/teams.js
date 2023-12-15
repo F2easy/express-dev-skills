@@ -18,7 +18,7 @@ router.get('/:id', teamsCtrl.show);
 
 // POST/teams
 router.post('/', teamsCtrl.create);
-
-
+// DELETE/teams/id
+router.delete('/:id', teamsCtrl.delete);
 
 module.exports = router;
