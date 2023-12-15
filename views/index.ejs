@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+     <p style="background-image: url('//img.mlbstatic.com/mlb-images/image/private/mlb/z7by5p7mfpib6fgt6tca.jpg');"></p>
+    <ul>
+      <%team.forEach(function(team){ %>
+      <li>
+        <form action="/teams/<%= team.id %>?_method=DELETE"
+          class="delete-form" method="POST">
+          <button type="submit">X</button>
+        </form>
+        <a href = "/teams/<% team.name %>"><%= team.name %></a>
+      </li>
+     <%  }) %>
+    </ul>
+    <h1>Welcome to the league website !<h1>
+    <a href="/">Sign Up</a>
+    <h1> Season Schedule </h1>
+    <a href = "/teams/<% team.id %>"><%team.name%></a> 
+    <a href="teams/new">Add-Your-Team!</a>
   </body>
 </html>
